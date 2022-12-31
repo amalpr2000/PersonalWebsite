@@ -7,11 +7,13 @@ window.addEventListener('load', () => {
     })
   });
 
+  
+    
+
   function namecheck(){
     var name=document.getElementById("name").value
     var trimmedname=name.trim()
     var alphabets=/^[A-Za-z ]+$/;
-    var specialchar=/^[!@#$%^&*()_+\~~\[\]{}}TE"\\[,.<\/?]+[A-Za-z]*$/;
     if(trimmedname.match(alphabets)){
       document.getElementById("errorname").innerHTML ="";
       return true;
@@ -29,7 +31,7 @@ window.addEventListener('load', () => {
   function emailcheck(){
     var Email=document.getElementById("Email").value
     var trimmedemail=Email.trim()
-    var emailpattern=/\S+@\S+\.\S+/g;
+    var emailpattern=/\S+@\S*(\.\w{2,3})+$/g;
     if(trimmedemail.match(emailpattern)){
       document.getElementById("erroremail").innerHTML ="";
       return true;

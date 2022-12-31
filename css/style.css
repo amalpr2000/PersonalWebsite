@@ -223,6 +223,19 @@ li > a:only-child:after { content: ''; }
 		float: none;
 	}
 
+	a.move-ttop span {
+		color: white;
+		width: 30px;
+		height: 30px;
+		background-color:#252525;
+		line-height: 26px;
+		margin: 8% 0% 0% 50%;
+		border-radius: 50%;
+		position: fixed;
+		z-index: 3;
+		display: none;
+	}
+
 	nav {
 		margin: 0;
 	}
@@ -256,10 +269,10 @@ li > a:only-child:after { content: ''; }
 		letter-spacing: 1px;
 	}
 
-	.toggle:hover {
+	/* .toggle:hover {
 		color:#333;
 		background-color: #fff;
-	}
+	} */
 
 	/* Display Dropdown when clicked on Parent Lable */
 	[id^=drop]:checked + ul {
@@ -1302,6 +1315,7 @@ footer {
 	.banner-layer, .banner {
 		min-height: 550px;
 	}
+	
 }
 @media(max-width:384px) {
 	.w3pvt_banner_info h2 {
@@ -1358,4 +1372,5 @@ footer {
     padding: 7px 15px;
     font-size: 16px;
 	}
+	
 }

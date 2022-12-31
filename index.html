@@ -43,11 +43,11 @@
 		<nav class="py-4">
         
 
-        <label for="drop" class="toggle" data-aos="fade-down">Menu</label>
+        <label for="drop" class="toggle" id="toggle" data-aos="fade-down">Menu</label>
         <input type="checkbox" id="drop" />
-            <ul class="menu mt-2" data-aos="fade-left">
+            <ul class="menu mt-2" id="sidebar" data-aos="fade-left">
                 <li class="mr-lg-4 mr-3 active"><a href="#">Home</a></li>
-                <li class="mr-lg-4 mr-3"><a href="#about">About</a></li>
+                <li class="mr-lg-4 mr-3" onclick="func()"><a href="#about">About</a></li>
                 <li class="mr-lg-4 mr-3"><a href="#services">Services</a></li>
                 <li class="mr-lg-4 mr-3"><a href="#projects">Work</a></li>
                 <li class="mr-lg-4 mr-3">
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- <a href="#home" class="move-ttop scroll"><span class="fa fa-angle-up icoup" aria-hidden="true"></span></a> -->
+		<a href="#home" class="move-ttop scroll"><span class="fa fa-angle-up icoup" aria-hidden="true"></span></a>
 	</div>
 </section>
 <!-- //banner -->	
@@ -93,15 +93,15 @@
 	<div class="container py-3">
 		<h3 class="heading">About Me</h3>
 		<div class="row about-grids">
-			<div class="col-lg-4" data-aos="fade-right">
+			<div class="col-lg-4" data-aos="zoom-in">
 				<h4 class="">Flutter Developer & Web Designer</h4>
-				<p class="my-4">I'm a flutter developer and web designer focused on crafting clean experiences.Passionate software engineer with a great interest in mobile apps.</p>
+				<p class="my-4" style="text-align: justify;">I'm a flutter developer and web designer focused on crafting clean experiences.Passionate software engineer with a great interest in mobile apps.</p>
 			<!--<a href="#"> Download CV <span class="fa ml-2 fa-download"></span> </a>	-->	
 			</div>
 			<div class="col-lg-4 col-md-12 my-lg-0 my-5">
 				<img src="images/about.jpg" alt="" class="img-fluid" />
 			</div>
-			<div class="col-lg-4" data-aos="fade-left">
+			<div class="col-lg-4" data-aos="zoom-in">
 				<div class="wthree_skills">
 					<h4 class="">My Skills</h4>
 
@@ -140,7 +140,7 @@
 <section class="services py-5" id="services">
 	<div class="container py-5">
 		<h3 class="heading">Services</h3>
-		<div class="row service-grids">
+		<div class="row service-grids" style="text-align: center;">
 			<div class="col-lg-4 col-md-6 w3layouts w3-icon-grid1" data-aos="zoom-in">
 				<h3><span class="fa mr-2 fa-mobile" aria-hidden="true"></span>Flutter Developer</h3>
 				<p>I'm using Flutter for the app development for both ios and android devices.</p>
@@ -256,7 +256,7 @@
 			  <img class="rounded-circle" src="./images/avatar-2.jpg">
 			  <div class="ms-3">
 				<h5>Alen Sabu</h5>
-				<small>Data Scientist</small>
+				<small>data Scientist</small>
 			  </div>
 			</div>
 
@@ -328,9 +328,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-7 mt-lg-0 mt-5 contact-right" data-aos="fade-left">
+			<div class="col-lg-7 mt-lg-0 mt-5 contact-right" data-aos="fade-right">
 				<h4 class="mb-4">Get In Touch</h4>
 				<form id="submit-form" action="">
+					
 					<label><span class="fa mr-2 fa-user" aria-hidden="true"></span> Name</label>
 					<input type="text" id="name" name="Name" placeholder="Name" onblur="namecheck()">
 					<label for="name" id="errorname" class="errormsg"></label>
@@ -341,16 +342,12 @@
 					<label for="Email" id="erroremail" class="errormsg"></label>
 					<div class="clearfix"></div>
 
-					<!-- <label><span class="fa mr-2 fa-phone" aria-hidden="true"></span>Phone</label>
-					<input type="text" name="Phone" id="Phone" placeholder="Enter your 10-digit phone number" onblur="phonecheck()">
-					<label for="Phone" id="errorphone" class="errormsg"></label>
-					<div class="clearfix"></div> -->
-
 					<label><span class="fa mr-2 fa-edit" aria-hidden="true"></span>Message</label>
 					<textarea name="Message" id="Message" placeholder="Enter the message ..." onblur="msgcheck()"></textarea>
 					<label for="Message" id="errormsg" class="errormsg"></label>
 					<div class="clearfix"></div>
 					<button type="submit" class="btn">Submit</button>
+
 				</form>
 			</div>
 		</div>
@@ -387,7 +384,7 @@
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<img src="images/pop2.png" alt="Popup Image" class="img-fluid" id="pophome">
-		<p class="mt-4 editContent">I'm a flutter developer and web designer focused on crafting clean & user friendly experiences.I have a diverse set of skills,ranging from design, to HTML + CSS + Javascript, all the way to Flutter.</p>
+		<p class="mt-4 editContent" style="text-align: justify;">I'm a flutter developer and web designer focused on crafting clean & user friendly experiences.I have a diverse set of skills,ranging from design, to HTML + CSS + Javascript, all the way to Flutter.</p>
 	<a class="close" href="#">&times;</a>
 	</div>
 </div>
@@ -442,6 +439,9 @@
 	
 	
 <!-- //popup for gallery -->
+
+
+</script>
 	<script>
 		$("#submit-form").submit((e)=>{
 			e.preventDefault()
